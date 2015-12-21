@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactTestUtils from 'react-addons-test-utils'
-import { MockComponents } from './mocks'
+import { MockComponents } from './mocks/ReactNativeMocks'
 import expect from 'expect'
 import expectJSX from 'expect-jsx'
 

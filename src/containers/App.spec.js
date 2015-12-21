@@ -1,7 +1,7 @@
 import App from './App'
-import common from '../test/common'
+import utils from '../../test/utils'
 
-const { createRenderer, React, expect, MockComponents } = common
+const { createRenderer, React, expect, MockComponents } = utils
 const { Text } = MockComponents
 
 describe('App', () => {
