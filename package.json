@@ -4,8 +4,16 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "test": "./node_modules/mocha/bin/mocha src/**/*.spec.js --compilers js:./src/test/compiler",
+    "test": "./node_modules/mocha/bin/mocha src/**/*.spec.js --compilers js:./src/test/compiler; npm run linter",
+    "linter": "./node_modules/standard/bin/cmd.js --verbose | ./node_modules/snazzy/bin/cmd.js",
     "tdd": "./node_modules/mocha/bin/mocha src/**/*.spec.js --compilers js:./src/test/compiler -w"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "beforeEach",
+      "it"
+    ]
   },
   "dependencies": {
     "react-native": "^0.17.0"
@@ -39,6 +47,8 @@
     "expect-jsx": "^2.2.1",
     "mocha": "^2.3.4",
     "react": "^0.14.3",
-    "react-addons-test-utils": "^0.14.3"
+    "react-addons-test-utils": "^0.14.3",
+    "snazzy": "^2.0.1",
+    "standard": "^5.4.1"
   }
 }
