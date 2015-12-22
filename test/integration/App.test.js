@@ -18,7 +18,7 @@ describe('App', () => {
       .to.eventually.exist
   })
 
-  it('should have an instruction test', () => {
+  it('should have an instruction text', () => {
     return expect(deviceDriver.elementByXPath('//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.TextView[3]'))
       .to.eventually.exist
   })
