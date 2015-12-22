@@ -14,7 +14,7 @@ describe('App', () => {
   })
 
   it('should render a welcome text text', () => {
-    expect(output).toIncludeJSX(
+    expect(output).to.include(
         <Text style={{fontSize: 20,
                       textAlign: 'center',
                       margin: 10}}>
@@ -24,7 +24,7 @@ describe('App', () => {
   })
 
   it('should tell where to start', () => {
-    expect(output).toIncludeJSX(
+    expect(output).to.include(
         <Text style={{color: '#333333',
                       textAlign: 'center',
                       marginBottom: 5}}>
@@ -34,7 +34,7 @@ describe('App', () => {
   })
 
   it('should explain the dev menu', () => {
-    expect(output).toIncludeJSX(
+    expect(output).to.include(
         <Text style={{color: '#333333',
                       textAlign: 'center',
                       marginBottom: 5}}>

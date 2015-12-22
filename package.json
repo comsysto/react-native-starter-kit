@@ -6,20 +6,24 @@
     "start": "react-native start",
     "test": "./node_modules/mocha/bin/mocha src/**/*.spec.js --compilers js:./test/compiler; npm run linter",
     "linter": "./node_modules/standard/bin/cmd.js --verbose | ./node_modules/snazzy/bin/cmd.js",
-    "tdd": "./node_modules/mocha/bin/mocha src/**/*.spec.js --compilers js:./src/test/compiler -w",
+    "test:integration": "./node_modules/mocha/bin/mocha test/**/*.test.js --compilers js:./test/compiler --no-timeouts",
+    "tdd": "./node_modules/mocha/bin/mocha src/**/*.spec.js --compilers js:./test/compiler -w",
     "reset": "rm -r node_modules/; npm i"
   },
   "standard": {
     "globals": [
       "describe",
       "beforeEach",
-      "it"
+      "it",
+      "before",
+      "after"
     ]
   },
   "dependencies": {
     "react-native": "^0.17.0"
   },
   "devDependencies": {
+    "appium": "^1.4.16",
     "babel-core": "^6.3.21",
     "babel-plugin-syntax-async-functions": "^6.3.13",
     "babel-plugin-syntax-class-properties": "^6.3.13",
@@ -46,11 +50,13 @@
     "chai-as-promised": "^5.2.0",
     "expect": "^1.13.4",
     "expect-jsx": "^2.2.1",
+    "jsx-chai": "^2.0.0",
     "mocha": "^2.3.4",
     "mocha-bamboo-reporter": "^1.1.0",
     "react": "^0.14.3",
     "react-addons-test-utils": "^0.14.3",
     "snazzy": "^2.0.1",
-    "standard": "^5.4.1"
+    "standard": "^5.4.1",
+    "wd": "^0.4.0"
   }
 }
