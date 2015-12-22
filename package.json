@@ -6,7 +6,8 @@
     "start": "react-native start",
     "test": "./node_modules/mocha/bin/mocha src/**/*.spec.js --compilers js:./test/compiler; npm run linter",
     "linter": "./node_modules/standard/bin/cmd.js --verbose | ./node_modules/snazzy/bin/cmd.js",
-    "tdd": "./node_modules/mocha/bin/mocha src/**/*.spec.js --compilers js:./src/test/compiler -w"
+    "tdd": "./node_modules/mocha/bin/mocha src/**/*.spec.js --compilers js:./src/test/compiler -w",
+    "reset": "rm -r node_modules/; npm i"
   },
   "standard": {
     "globals": [
