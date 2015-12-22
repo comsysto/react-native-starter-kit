@@ -48,8 +48,6 @@
     "babel-plugin-transform-regenerator": "^6.3.18",
     "chai": "^3.4.1",
     "chai-as-promised": "^5.2.0",
-    "expect": "^1.13.4",
-    "expect-jsx": "^2.2.1",
     "jsx-chai": "^2.0.0",
     "mocha": "^2.3.4",
     "mocha-bamboo-reporter": "^1.1.0",
