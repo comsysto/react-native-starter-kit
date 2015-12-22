@@ -16,5 +16,14 @@ export default {
   createRenderer: ReactTestUtils.createRenderer,
   deviceDriver: wd.promiseChainRemote('0.0.0.0', 4723),
   React,
-  MockComponents
+  MockComponents,
+  devices: {
+    android: {
+      'appium-version': '1.0',
+      platformName: 'Android',
+      platformVersion: '5.1',
+      deviceName: 'Nexus 5',
+      app: process.cwd() + '/android/app/build/outputs/apk/app-release-unsigned.apk'
+    }
+  }
 }
